@@ -16,7 +16,9 @@ let msg = () =>{
     
 };
 
-function 
+function showToast(msg){
+    let toast = document.createElement(div;)
+}
 
 
 // function success(msg){
