@@ -6,13 +6,26 @@ function showToast(e){
     let toast = document.createElement("div");
     toast.classList.add("toast");
     let p1 = document.createElement("p");
-    p1.textContent = "Success";
-    toast.appendChild(p1);
     let p2 = document.createElement("p");
-    p2.textContent = "The stage is cleared";
+    if(e.target.classList.contains("success")){
+        p1.textContent = "Success";
+        p2.textContent = "The stage is cleared";
+    }else if(e.target.classList.contains("error")){
+        p1.textContent = "Error";
+        p2.textContent = "The submission encountered an error";
+    } else if (e.target.classList.contains("warning")) {
+        p1.textContent = "Warning";
+        p2.textContent = "The submission produces a warning";
+    } else if (e.target.classList.contains("info")) {
+        p1.textContent = "Info";
+        p2.textContent = "The submission requires additional information";
+    }
+    toast.appendChild(p1);
     toast.appendChild(p2);
     document.body.appendChild(toast);
-    
+    setTimeout(() => {
+        toast.remove();
+    }, 3000);
 }
 const saveBtn = document.getElementById("success");
 const errorBtn = document.getElementById("error");
@@ -23,19 +36,3 @@ saveBtn.addEventListener("click", showToast);
 errorBtn.addEventListener("click", showToast);
 warningBtn.addEventListener("click", showToast);
 infoBtn.addEventListener("click", showToast);
-
-
-// let msg = () =>{
-//     if(element.classList.contains === success){
-//         return (`<p>Success</p><p>The submission is successfully uploaded</p>`);
-//     }
-//     if(element.classList.contains === error){
-//         return (`<p>Success</p><p>The submission encounters an eror.</p>`);
-//     }
-//     if(element.classList.contains === warning){
-//         return (`<p>Success</p><p>The submission produces a warning.</p>`);
-//     }
-//     if(element.classList.contains === info){
-//         return (`<p>Success</p><p>The submission requires additional information</p>`);
-//     }
-// };
