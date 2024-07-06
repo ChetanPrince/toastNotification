@@ -9,14 +9,6 @@ body{
     background-image: linear-gradient(to bottom, rgba(255, 13, 13, 0.5), rgba(127, 185, 2, 0.5));
 }
 
-#hello-div{
-    width: 100%;
-    height: auto;
-    border: 2px solid grey;
-    border-radius: 5px;
-   margin:0;
-   overflow: auto;
-}
 .buttons-div{
     display: flex;
     flex-direction: row;
@@ -37,14 +29,18 @@ button:hover{
 button:active{
     transform: translate(2px, 2px);
 }
-#flag-success, #flag-error, #flag-warning, #flag-info{
+
+/* #flag-success, #flag-error, #flag-warning, #flag-info{ */
+.toast{
     position: fixed;
     top: 25px;
     right: 25px;
     max-width: 300px;
-    border: 1px solid black;
+    border-bottom: 5px solid black;
     z-index: 9999;
     display: flex;
+    flex-direction: column;
+    gap: 10px;
     justify-content: center;
     align-items: center;
     padding: 1rem;
@@ -54,7 +50,15 @@ button:active{
     animation: slideInRight 0.3s ease-in-out forwards, fadeout 0.5s ease-in-out forwards 3s;
     transform: translateX(110%);
 }
-.toast-progress{
+.toast p:first-child{
+    font-size: 24px;
+    font-weight: 400;
+}
+.toast p:last-child{
+    font-size: 16px;
+    font-weight: 200;
+}
+/* .toast-progress{
     position: absolute;
     display: block;
     bottom:0;
@@ -63,7 +67,7 @@ button:active{
     width: 100%;
     background: #b7b7b7;
     animation: toastProgress 3s ease-in-out forwards;
-}
+} */
 
 #flag-success{
     background-color: rgba(7, 246, 7, 0.579);
@@ -96,7 +100,7 @@ button:active{
     100%{transform: translate(110%);}
 }
 @keyframes fadeout{
-    0%{opacity: 1;    }
+    0%{opacity: 1;   }
     100%{opacity: 0;}
 }
 @keyframes toastProgress{
