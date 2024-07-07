@@ -6,7 +6,7 @@ const toastContainer = document.getElementById('toast-container');
             warning: ["Warning", "The submission produces a warning"],
             info: ["Info", "The submission requires additional information"]
         };
-
+s
         function showToast(type) {
             if (!messages[type]) {
                 console.error(`Unknown toast type: ${type}`);

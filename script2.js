@@ -19,7 +19,15 @@ function showToast(type){
 
     setTimeout (()=>{
         div1.classList.add("show");
-    }, 100)
+    }, 100);
+
+    setTimeout(()=>{
+div1 .classList.remove("show");
+div1.addEventListener("transitionend",()=>{
+    div1.remove();
+} );
+    }, 3000);
+
 
 }
 
