@@ -12,9 +12,32 @@ body{
     flex-direction: column; */
     background-image: linear-gradient(to bottom, rgba(255, 13, 13, 0.5), rgba(127, 185, 2, 0.5));
 }
+.container{
+    width: 80%;
+    /* height: 50%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10%;
+}
 .btn-igual{
     width: 15vw;
     height: 10vh;
     margin: 10px;
     padding: 2px;
+    font-weight: 600;
+    border: 1px solid rgb(126, 236, 126);
+    border-radius: 7px;
+    background-color: transparent;
+    box-shadow: 4px 4px 10px rgb(126, 236, 126);
+  
+}
+.btn-igual:hover{
+    background-color:rgba(240, 140, 77, 0.733);
+}
+.btn-igual:active{
+    transform: translate(4px, 4px);
+    box-shadow: -2px -2px 10px rgb(126, 236, 126);
+    width: 14.5vw;
+    height: 9.5vh;
 }
