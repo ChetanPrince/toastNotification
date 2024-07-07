@@ -40,15 +40,4 @@ const toastContainer = document.getElementById('toast-container');
             }, 3000);
         }
 
-        document.querySelector('.container').addEventListener('click', function (e) {
-            if (e.target.tagName === 'BUTTON') {
-                const type = e.target.classList.contains('success') ? 'success' :
-                    e.target.classList.contains('error') ? 'error' :
-                    e.target.classList.contains('warning') ? 'warning' :
-                    e.target.classList.contains('info') ? 'info' : null;
-        
-                if (type) {
-                    showToast(type);
-                }
-            }
-        });
+        document
