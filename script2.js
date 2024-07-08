@@ -2,7 +2,7 @@ const toastContainer = document.getElementById("toast-container");
 const messages = {
     success : ["Success", "The submission is successfully processed."],
     error : ["error", "The submission encounters an error"],
-    warning : ["Warning", "The submission encounters a warning"],
+    warning : ["warning", "The submission encounters a warning"],
     info: ["info", "The submission looks for extra information"]
 };
 
@@ -19,15 +19,12 @@ function showToast(type){
 
     if(messages[type][0].includes("error")){
         div1.classList.add("errorr");
-        console.log(messages[type][0])
     }
     if(messages[type][0].includes("warning")){
-        div1.classList.add("warningg");
-        console.log(messages[type][0])
+        div1.classList.add("warningg");  
     }
     if(messages[type][0].includes("info")){
-        div1.classList.add("infoo");
-        console.log(messages[type][0])
+        div1.classList.add("infoo");   
     }
 
     setTimeout (()=>{
