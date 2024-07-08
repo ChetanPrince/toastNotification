@@ -16,15 +16,18 @@ function showToast(type){
     p2.textContent = messages[type][1];
     div1.appendChild(p2);
     toastContainer.appendChild(div1);
-    
-    if(messages.includes("error")){
-        div1.classList.add("error");
+
+    if(messages[type][0].includes("error")){
+        div1.classList.add("errorr");
+        console.log(messages[type][0])
     }
-    if(messages.includes("warning")){
-        div1.classList.add("warning");
+    if(messages[type][0].includes("warning")){
+        div1.classList.add("warningg");
+        console.log(messages[type][0])
     }
-    if(messages.includes("info")){
-        div1.classList.add("info");
+    if(messages[type][0].includes("info")){
+        div1.classList.add("infoo");
+        console.log(messages[type][0])
     }
 
     setTimeout (()=>{
@@ -32,7 +35,7 @@ function showToast(type){
     }, 100);
 
     setTimeout(()=>{
-div1 .classList.remove("show");
+div1.classList.remove("show");
 div1.addEventListener("transitionend",()=>{
     div1.remove();
 } );

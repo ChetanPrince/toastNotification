@@ -91,12 +91,12 @@ body{
         width: 0%;
     }   
 }
-.toast .error::after{
+.toast.errorr::after{
     background: red;
 }
-.toast .warning::after{
+.toast.warningg::after{
     background: orange;
 }
-.toast .info::after{
+.toast.infoo::after{
     background: blue;
 }
