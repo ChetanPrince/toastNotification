@@ -41,3 +41,36 @@ body{
     width: 7rem;
     height: 1.7rem;
 }
+#output{
+    display: flex;
+    flex-direction: column;
+    right: 0px;
+    bottom: 0px;
+}
+.toast{
+    position: relative;
+    position: fixed;
+    width: 250px;
+    height: 40px;
+    border: 1px solid rgba(37, 134, 37, 0.479);
+    right: 20px;
+    bottom: 20px;
+    border-radius: 7px;
+    background-color: rgba(108, 4, 253, 0.097);
+}
+.toast::after{
+    content:"";
+    width: 100%;
+    height: 5px;
+    bottom: 0px;
+    background: green;
+    border-radius: 5px;
+    position: absolute;
+    animation: anim 3s linear forwards;
+}
+@keyframes anim {
+    100%{
+        width: 0px;
+    }
+    
+}
