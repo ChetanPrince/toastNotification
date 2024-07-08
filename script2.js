@@ -19,6 +19,9 @@ function showToast(type){
 
     setTimeout (()=>{
         div1.classList.add("show");
+        if(type === "success" ){
+            div1.classList.add("ok");
+        }
     }, 100);
 
     setTimeout(()=>{

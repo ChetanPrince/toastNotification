@@ -79,3 +79,8 @@ body{
 .toast p {
     margin: 0;
 }
+
+.ok{
+    border-bottom: 5px solid green;
+
+}
