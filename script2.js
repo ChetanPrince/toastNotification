@@ -16,12 +16,19 @@ function showToast(type){
     p2.textContent = messages[type][1];
     div1.appendChild(p2);
     toastContainer.appendChild(div1);
+    
+    if(messages.includes("error")){
+        div1.classList.add("error");
+    }
+    if(messages.includes("warning")){
+        div1.classList.add("warning");
+    }
+    if(messages.includes("info")){
+        div1.classList.add("info");
+    }
 
     setTimeout (()=>{
         div1.classList.add("show");
-        if(type === "success" ){
-            div1.classList.add("ok");
-        }
     }, 100);
 
     setTimeout(()=>{

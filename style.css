@@ -68,15 +68,9 @@ body{
     position: relative;
 }
 
-.success{
-    border-bottom: 5px solid rgb(126, 236, 126);
-
-}
-
 .toast.show {
     opacity: 1;
 }
-
 .toast p {
     margin: 0;
 }
@@ -95,8 +89,14 @@ body{
 @keyframes anim {
     100%{
         width: 0%;
-    }0%{
-        width: 100%;
-    }
-    
+    }   
+}
+.toast .error::after{
+    background: red;
+}
+.toast .warning::after{
+    background: orange;
+}
+.toast .info::after{
+    background: blue;
 }
