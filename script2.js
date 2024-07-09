@@ -73,6 +73,10 @@ function showToast(type){
         warning : "warning",
         info : "info",
     }
+    if(names[type]){
+
+        div1.classList.add(names[type]);
+    }
 
     setTimeout (()=>{
         div1.classList.add("show");
