@@ -42,21 +42,25 @@ body{
     height: 1.7rem;
 }
 #output{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
     display: flex;
     flex-direction: column;
-    right: 0px;
-    bottom: 0px;
+    gap: 10px;
+    z-index: 1000;
 }
 .toast{
+    display: flex;
+    flex-direction: column;
     position: relative;
-    position: fixed;
     width: 250px;
-    height: 40px;
+    height: 80px;
     border: 1px solid rgba(37, 134, 37, 0.479);
-    right: 20px;
-    bottom: 20px;
     border-radius: 7px;
     background-color: rgba(108, 4, 253, 0.097);
+    opacity: 0;
+    gap: 10px;
 }
 .toast::after{
     content:"";
@@ -67,6 +71,19 @@ body{
     border-radius: 5px;
     position: absolute;
     animation: anim 3s linear forwards;
+    
+}
+.show{
+    opacity:1;
+}
+.toast.error::after{
+    background: red;
+}
+.toast.error::warning{
+    background: orange;
+}
+.toast.info::after{
+    background: blue;
 }
 @keyframes anim {
     100%{
